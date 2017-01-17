@@ -9,8 +9,6 @@ var mathOperators = {
     '/': function(x, y) {return x / y}
 };
 
-var polandNotationString = '';
-
 function polandNotation (inputString) {
     var outputString = '';
     var operationStack = [];
@@ -52,11 +50,8 @@ function evaluate(expr) {
     return stack.pop();
 }
 
-polandNotationString = polandNotation (argumentsString);
+var polandNotationString = polandNotation (argumentsString);
 
 result = evaluate(polandNotationString);
-//result = evaluate(argumentsString);
 
 console.log('Результат выражения ' + result);
-
-/
